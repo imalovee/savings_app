@@ -1,6 +1,8 @@
 
 import 'package:flutter/material.dart';
 
+import 'hide_todo_sheet.dart';
+
 class TodoSection extends StatelessWidget {
   const TodoSection({
     super.key,
@@ -22,7 +24,14 @@ class TodoSection extends StatelessWidget {
                   fontSize: 16,
                 ),),
               TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    showModalBottomSheet(
+                        //showDragHandle: true,
+                        context: context,
+                        builder: (context){
+                          return HideTodoSheet();
+                        });
+                  },
                   child: Row(
                     children: [
                       Text('Hide',
@@ -263,3 +272,5 @@ class TodoSection extends StatelessWidget {
     );
   }
 }
+
+

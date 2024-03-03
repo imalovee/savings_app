@@ -1,6 +1,8 @@
 
 import 'package:flutter/material.dart';
 
+import '../../Invest/pages/explore_investment_page.dart';
+
 class VettedSection extends StatelessWidget {
   const VettedSection({
     super.key,
@@ -25,7 +27,14 @@ class VettedSection extends StatelessWidget {
                 ),
               ),
               TextButton(
-                onPressed: (){},
+                onPressed: (){
+                  Navigator.push(
+                      context, 
+                      MaterialPageRoute(builder: (context){
+                        return ExploreInvestmentPage();
+                      })
+                  );
+                },
 
                 child: Row(
                   children: [
@@ -187,4 +196,5 @@ class VettedSection extends StatelessWidget {
     );
   }
 }
+
 

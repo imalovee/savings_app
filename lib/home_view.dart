@@ -6,7 +6,9 @@ import 'Features/Home/widgets/savings_details_card.dart';
 import 'Features/Home/widgets/suggestions_section.dart';
 import 'Features/Home/widgets/todo_section.dart';
 import 'Features/Home/widgets/top_savings.dart';
+import 'Features/Home/widgets/user_balance_details.dart';
 import 'Features/Home/widgets/vetted_section.dart';
+import 'Features/Invest/widgets/invest_card.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -46,24 +48,8 @@ class HomeView extends StatelessWidget {
       body: ListView(
         padding: EdgeInsets.all(16.0),
         children: [
-          SavingDetails(
-            balance:"\$20000",
-            topRightWidget: ElevatedButton(
-      onPressed: () {},
-      child: Row(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          Text("View savings",
-          ),
-          Icon(Icons.arrow_forward),
-        ],
-      ),
-              style: ElevatedButton.styleFrom(
-                padding: EdgeInsets.symmetric(vertical: 0, horizontal: 8,)
-              ),
-    ),
+          UserBalanceDetails(),
 
-          ),
           TodoSection(),
           TopSavings(),
           SuggestionsSection(),

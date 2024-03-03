@@ -26,8 +26,11 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       backgroundColor: Colors.grey,
 
-      body: tabs[selectedIndex],
+      body: IndexedStack(
+        children: tabs,
+        index: selectedIndex,
 
+      ),
 
         bottomNavigationBar: BottomNavigationBar(
           unselectedItemColor: Colors.black,

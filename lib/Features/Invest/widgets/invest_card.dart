@@ -28,7 +28,7 @@ class InvestCard extends StatelessWidget {
             backgroundColor: Colors.black,
             shape: StadiumBorder(),),
           SizedBox(
-            height: 16,
+            height: 8,
           ),
           Text('Total investments',
             style: TextStyle(
@@ -38,7 +38,7 @@ class InvestCard extends StatelessWidget {
             style: TextStyle(
               fontWeight: FontWeight.bold,
               color: Colors.white,
-              fontSize: 16,
+              fontSize: 14,
             ),)
         ],
       ),
